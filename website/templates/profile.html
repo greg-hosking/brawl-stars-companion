@@ -11,8 +11,6 @@
 {% block content %}
 {% if player_data %}
 <article id="profileArticle" class="row">
-
-
   <div class="col-lg-7 col-md-12 col-sm-12 col-12">
     <h1>{{ player_data['name'].upper() }}'S PROFILE</h1>
     <!-- <h2>LEVEL: {{ player_data['expLevel'] }}</h2> -->
@@ -26,18 +24,12 @@
     <h2>SOLO VICTORIES: {{ player_data['soloVictories'] }}</h2>
     <img src="{{ url_for('static', filename='images/icons/duo_showdown.png') }}">
     <h2>DUO VICTORIES: {{ player_data['duoVictories'] }}</h2>
-
-
-    <!-- <img src="{{ url_for('static', filename='images/brawlers/portraits/crow.png') }}"> -->
     <img
       src="{{ url_for('static', filename='images/brawlers/portraits/') }}{{ highest_trophy_brawler['name'].lower() }}.png">
     <h2>HIGHEST TROPHY BRAWLER: {{ highest_trophy_brawler['name'] }}</h2>
-
-
   </div>
   <div class="col-lg-5 d-none d-lg-block">
     <span>
-
       <img
         src="{{ url_for('static', filename='images/brawlers/default_skins/') }}{{ highest_trophy_brawler['name'].lower() }}.png">
     </span>

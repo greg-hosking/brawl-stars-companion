@@ -188,7 +188,6 @@ article a:hover, article a:active {
 }
 #profileArticle > div > span > img {
 	display: block;
-	/* margin: 0 auto; */
 	float: right;
 }
 #profileArticle > div > h2 {
