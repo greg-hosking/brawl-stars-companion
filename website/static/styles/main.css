@@ -1,0 +1,265 @@
+* {
+	margin: 0;
+	padding: 0;
+	/* Set the font for every element */
+    font-family: 'Lilita One'; 
+    -webkit-text-stroke: 1px black;
+
+}
+
+/* Color variable declarations */
+:root {
+    --navy: rgba(13, 26, 50, 255);
+    --lightblue: rgba(47, 97, 174, 255);
+    --darkblue: rgba(35, 57, 101, 255); 
+	--yellow: rgba(236,167,29,255);
+	--red: rgba(228,31,29,255);
+	--green: rgba(14,173,8,255);
+}
+
+/* Clearfix */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+header {
+	background: var(--navy);
+	border-bottom: 3px solid whitesmoke;
+	color: whitesmoke;
+}
+/* Float the logo image to the left of the main heading */
+header img {
+	float: left;
+	max-width: 175px;
+	min-width: 150px;
+	padding-right: 2.5em;
+	width: 100%;
+}
+header h1 {
+	padding: 0.6em 0 1em 0;
+	font-size: 300%;
+}
+/* Set all h1 tags to be an off-white color */
+h1 {
+    color: whitesmoke;
+}
+
+nav {
+	background: var(--navy);
+	color: whitesmoke;
+}
+
+/* Set the background of every page to an off-white */
+#content-container {
+	background: var(--darkblue);
+}
+
+/* Give each article a black background, a subtle shadow, and some spacing */
+article {
+	background: var(--lightblue);
+	box-shadow: 0 0 15px black;
+	color: whitesmoke;
+	margin-bottom: 3em;
+	padding: 1.5em;
+}
+article h1 {
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid whitesmoke;
+}
+article h2 {
+	padding-bottom: 0.25em;
+}
+article a {
+    color: lightsteelblue;
+}
+article a:hover, article a:active {
+    color: steelblue;
+}
+
+/* Set the image carousel to have a thin, off-white border */
+.carousel {
+    border: 2px solid whitesmoke;
+}
+/* Normalize the carousel images */
+.carousel-item img {
+    width: auto;
+    height: 450px;
+    max-height: 450px;
+}
+
+/* Remove the underlines from the accordion card links and set their colors */
+.card-header > h1 > a {
+	color: whitesmoke;
+}
+.card-header > h1 > a:hover, .card-header > h1 > a:active {
+	color: gainsboro;
+	text-decoration: none;
+}
+.card-body > div > article > .caption > div > .card > .card-header > h3 {
+	border-bottom: 0;
+}
+.card-body > div > article > .caption > div > .card > .card-header > h3 > a {
+	color: whitesmoke;
+}
+.card-body > div > article > .caption > div > .card > .card-header > h3 > a:hover,
+.card-body > div > article > .caption > div > .card > .card-header > h3 > a:active {
+	color: gainsboro;
+	text-decoration: none;
+}
+
+/* Set the image wrappers to have a thin off-white border and the correct position and spacing */
+.image-wrapper, .brawler-image-wrapper {
+	border: 2px solid whitesmoke;
+	height: 0;
+	width: 100%;
+	margin: 0;
+	padding-top: 25px;
+	position: relative;
+}
+.image-wrapper img, .brawler-image-wrapper img {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.image-wrapper {
+    padding-bottom: 50%;
+}
+.brawler-image-wrapper {
+	padding-bottom: 50%;
+	border: 10px solid black;
+}
+.brawler-image-wrapper img {
+	width: 75%;
+}
+
+/* Set the caption to have a light gray color and a bit of top padding */
+.caption {
+    padding-top: 0.75em;
+	color: whitesmoke;
+}
+.caption h3 {
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid whitesmoke;
+}
+.caption h4 {
+    line-height: 1.4;
+    padding-bottom: 0.75em;
+    color: whitesmoke;
+}
+
+/* Set the colors for the attack, super, gadget, and star power headings */
+.attack-heading {
+	color: var(--red);
+}
+.super-heading, .star-power-heading {
+	color: var(--yellow);
+}
+.gadget-heading {
+	color: var(--green);
+}
+
+#form > div > label {
+	text-align: center;
+	width: 100%;
+}
+#form > div > input {
+	height: 75px;
+	font-size: 200%;
+	color: black;
+	text-align: center;
+	text-transform: uppercase;
+}
+#form > button {
+	background: var(--darkblue);
+	color: whitesmoke;
+	width: 100%;
+	font-size: 200%;
+}
+
+#profileArticle > div > img {
+	clear: both;
+	float: left;
+	width: 75px;
+	padding: 0.5em 1em 0.5em 0;
+}
+#profileArticle > div > span > img {
+	display: block;
+	/* margin: 0 auto; */
+	float: right;
+}
+#profileArticle > div > h2 {
+	padding-top: 0.5em;
+	padding-bottom: 0.45em;
+}
+
+
+#profileNotFoundArticle h1 {
+	border-bottom: none;
+	text-align: center;
+}
+#profileNotFoundArticle img {
+	margin: 0 auto;
+	display: block;
+	border: 2px solid whitesmoke;
+}
+
+footer {
+	background: var(--navy);
+	border-top: 3px solid whitesmoke;
+	color: whitesmoke;
+}
+
+/* Animate the carets for the accordions */
+[data-toggle="collapse"]:after {
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: "\f054";
+	transform: rotate(-90deg);
+	transition: all linear 0.25s;
+	float: right;
+}   
+[data-toggle="collapse"].collapsed:after {
+	transform: rotate(90deg);
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+	/* Center the logo image above the main heading */
+	header img {
+		display: block;
+		float: none;
+		margin: 0 auto;
+		max-width: 60%;
+		padding: 1em 0;
+		width: 25%;
+	}
+	/* Center the main heading and remove its padding */
+	header h1 {
+		padding: 0;
+		text-align: center;
+	}
+
+	#content-container {
+		width: 100%;
+	}
+
+    article {
+        border-bottom: 3px solid whitesmoke;
+        margin-bottom: 0;
+    }
+
+    /* Normalize the carousel images */
+    .carousel-item img {
+        width: auto;
+        height: 350px;
+        max-height: 350px;
+    }
+} 

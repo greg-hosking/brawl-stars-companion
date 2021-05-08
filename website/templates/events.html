@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+<!-- Update the title of the page -->
+{% block title %}Events{%endblock%}
+<!-- Set the home link on the navbar to active and the rest to inactive -->
+{% block nav_links %}
+<li class="nav-item"><a class="nav-link" href="/">PROFILE</a></li>
+<li class="nav-item"><a class="nav-link" href="/brawlers">BRAWLERS</a></li>
+<li class="nav-item active"><a class="nav-link" href="/events">EVENTS</a></li>
+<li class="nav-item"><a class="nav-link" href="/guide">BEGINNER'S GUIDE</a></li>
+{% endblock %}
+{% block content %}
+<!-- ----------------------------------------------------------------------------- -->
+<!-- EVENTS ACCORDION -->
+<!-- ----------------------------------------------------------------------------- -->
+<div class="accordion accordion-flush" id="eventsAccordion">
+  <!-- ----------------------------------------------------------------------------- -->
+  <!-- CARD 1 (EVENTS) -->
+  <!-- ----------------------------------------------------------------------------- -->
+  <div class="card">
+    <!-- Card 1 Header -->
+    <div class="card-header" id="eventsHeadingOne" style="background: rgba(47, 97, 174, 255);">
+      <h1 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#eventsCollapseOne" aria-expanded="false"
+          aria-controls="eventsCollapseOne">
+          EVENTS
+        </a>
+      </h1>
+    </div>
+    <!-- Card 1 Body -->
+    <div id="eventsCollapseOne" class="collapse" aria-labelledby="eventsHeadingOne">
+      <div class="card-body row">
+        <!-- Column 1 -->
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+          <!-- Event 1 (Gem Grab) -->
+          <article id="gem-grab-description">
+            <h2>GEM GRAB</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/gem_grab.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Collect Gems that pop out of the Gem Mine in the middle of the map. Or, just take them from fallen
+                opponents! Hold ten gems for the duration of a countdown to win the game!"
+              </h4>
+            </div>
+          </article>
+
+          <!-- Event 2 (Brawl Ball) (only displayed on small screens and smaller) -->
+          <article id="brawl-ball-description" class="d-xl-none d-lg-none d-sm-block">
+            <h2>BRAWL BALL</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/brawl_ball.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Take the ball to the opposing team's goal to score! Match ends when one team scores two goals, or at
+                full time."
+              </h4>
+            </div>
+          </article>
+
+          <!-- Event 3 (Heist) -->
+          <article id="heist-description">
+            <h2>HEIST</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/heist.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Protect your team's valuable safe, while trying to break open the enemy team's safe at the same time!
+                Whichever team busts open the enemy safe first wins."
+              </h4>
+            </div>
+          </article>
+
+          <!-- Event 4 (Bounty) (only displayed on small screens and smaller) -->
+          <article id="bounty-description" class="d-xl-none d-lg-none d-sm-block">
+            <h2>BOUNTY</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/bounty.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Collect Stars for your team by defeating players on the enemy team. Every time you defeat an enemy,
+                the bounty on your head increases by one Star. The team that has more Stars when the clock runs out
+                wins. In case of a tie, the team holding the blue star wins."
+              </h4>
+            </div>
+          </article>
+
+          <!-- Event 5 (Siege) -->
+          <article id="siege-description">
+            <h2>SIEGE</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/siege.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Besiege and destroy the enemy's IKE assembly turret! Your team also has an IKE: feed it bolts, and it
+                will assemble a powerful Siege Robot to fight for you."
+              </h4>
+            </div>
+          </article>
+
+          <!-- Event 6 (Solo Showdown) (only displayed on small screens and smaller) -->
+          <article id="solo-showdown-description" class="d-xl-none d-lg-none d-sm-block">
+            <h2>SOLO SHOWDOWN</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/showdown.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Go alone to fight in the Showdown Arena! Whoever's still standing at the end wins."
+              </h4>
+            </div>
+          </article>
+
+          <!-- Event 7 (Duo Showdown) -->
+          <article id="duo-showdown-description">
+            <h2>DUO SHOWDOWN</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/showdown.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Take down the other four teams. If you are defeated, you will respawn in a while if your teammate is
+                still alive!"
+              </h4>
+            </div>
+          </article>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12 d-none d-lg-block">
+          <!-- Event 2 (Brawl Ball) -->
+          <article id="brawl-ball-description">
+            <h2>BRAWL BALL</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/brawl_ball.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Take the ball to the opposing team's goal to score! Match ends when one team scores two goals, or at
+                full time."
+              </h4>
+            </div>
+          </article>
+
+          <!-- Event 4 (Bounty) -->
+          <article id="bounty-description">
+            <h2>BOUNTY</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/bounty.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Collect Stars for your team by defeating players on the enemy team. Every time you defeat an enemy,
+                the bounty on your head increases by one Star. The team that has more Stars when the clock runs out
+                wins. In case of a tie, the team holding the blue star wins."
+              </h4>
+            </div>
+          </article>
+
+          <!-- Event 6 (Solo Showdown) -->
+          <article id="solo-showdown-description">
+            <h2>SOLO SHOWDOWN</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/showdown.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Go alone to fight in the Showdown Arena! Whoever's still standing at the end wins."
+              </h4>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------------------------------------------------------- -->
+  <!-- CARD 2 (SPECIAL EVENTS) -->
+  <!-- ----------------------------------------------------------------------------- -->
+  <div class="card">
+    <!-- Card 2 Header -->
+    <div class="card-header" id="eventsHeadingTwo" style="background: rgba(47, 97, 174, 255);">
+      <h1 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#eventsCollapseTwo" aria-expanded="false" aria-controls="eventsHeadingTwo">
+          SPECIAL EVENTS
+        </a>
+      </h1>
+    </div>
+    <!-- Card 2 Body -->
+    <div id="eventsCollapseTwo" class="collapse" aria-labelledby="eventsHeadingTwo">
+      <div class="card-body row">
+        <!-- Column 1 -->
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+          <!-- Event 1 (Big Game) -->
+          <article id="big-game-description">
+            <h2>BIG GAME</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/big_game.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Five players attempt to defeat the BIG BRAWLER."
+              </h4>
+            </div>
+          </article>
+
+          <!-- Event 2 (Robo Rumble) (only displayed on small screens and smaller) -->
+          <article id="robo-rumble-description" class="d-xl-none d-lg-none d-sm-block">
+            <h2>ROBO RUMBLE</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/robo_rumble.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Defend the safe from greedy Robo Bandits!"
+              </h4>
+            </div>
+          </article>
+
+          <!-- Event 3 (Boss Fight) -->
+          <article id="boss-fight-description">
+            <h2>BOSS FIGHT</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/boss_fight.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Can you beat the formidable Boss Robot?"
+              </h4>
+            </div>
+          </article>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12 d-none d-lg-block">
+          <!-- Event 2 (Robo Rumble) -->
+          <article id="robo-rumble-description">
+            <h2>ROBO RUMBLE</h2>
+            <div class="image-wrapper">
+              <img src="{{ url_for('static', filename='images/events/robo_rumble.png') }}">
+            </div>
+            <div class="caption">
+              <h3>DESCRIPTION</h3>
+              <h4>
+                "Defend the safe from greedy Robo Bandits!"
+              </h4>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

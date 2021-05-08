@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+<!-- Update the title of the page -->
+{% block title %}Profile{%endblock%}
+<!-- Set the home link on the navbar to active and the rest to inactive -->
+{% block nav_links %}
+<li class="nav-item active"><a class="nav-link" href="/">PROFILE</a></li>
+<li class="nav-item"><a class="nav-link" href="/brawlers">BRAWLERS</a></li>
+<li class="nav-item"><a class="nav-link" href="/events">EVENTS</a></li>
+<li class="nav-item"><a class="nav-link" href="/guide">BEGINNER'S GUIDE</a></li>
+{% endblock %}
+{% block content %}
+{% if player_data %}
+<article id="profileArticle" class="row">
+
+
+  <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+    <h1>{{ player_data['name'].upper() }}'S PROFILE</h1>
+    <!-- <h2>LEVEL: {{ player_data['expLevel'] }}</h2> -->
+    <img src="{{ url_for('static', filename='images/icons/trophy.png') }}">
+    <h2>TROPHIES: {{ player_data['trophies'] }}</h2>
+    <img src="{{ url_for('static', filename='images/icons/trophy.png') }}">
+    <h2>HIGHEST TROPHIES: {{ player_data['highestTrophies'] }}</h2>
+    <img src="{{ url_for('static', filename='images/icons/3vs3.png') }}">
+    <h2>3vs3 VICTORIES: {{ player_data['3vs3Victories'] }}</h2>
+    <img src="{{ url_for('static', filename='images/icons/solo_showdown.png') }}">
+    <h2>SOLO VICTORIES: {{ player_data['soloVictories'] }}</h2>
+    <img src="{{ url_for('static', filename='images/icons/duo_showdown.png') }}">
+    <h2>DUO VICTORIES: {{ player_data['duoVictories'] }}</h2>
+
+
+    <!-- <img src="{{ url_for('static', filename='images/brawlers/portraits/crow.png') }}"> -->
+    <img
+      src="{{ url_for('static', filename='images/brawlers/portraits/') }}{{ highest_trophy_brawler['name'].lower() }}.png">
+    <h2>HIGHEST TROPHY BRAWLER: {{ highest_trophy_brawler['name'] }}</h2>
+
+
+  </div>
+  <div class="col-lg-5 d-none d-lg-block">
+    <span>
+
+      <img
+        src="{{ url_for('static', filename='images/brawlers/default_skins/') }}{{ highest_trophy_brawler['name'].lower() }}.png">
+    </span>
+  </div>
+</article>
+{% else %}
+<article id="profileNotFoundArticle">
+  <h1>OOPS! PROFILE NOT FOUND... PLEASE TRY AGAIN.</h1>
+  <img src="{{ url_for('static', filename='images/profile_not_found.jpg') }}" class="img-fluid">
+</article>
+{% endif %}
+{% endblock %}

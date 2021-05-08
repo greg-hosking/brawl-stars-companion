@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+<!-- Update the title of the page -->
+{% block title %}Beginner's Guide{%endblock%}
+<!-- Set the home link on the navbar to active and the rest to inactive -->
+{% block nav_links %}
+<li class="nav-item"><a class="nav-link" href="/">PROFILE</a></li>
+<li class="nav-item"><a class="nav-link" href="/brawlers">BRAWLERS</a></li>
+<li class="nav-item"><a class="nav-link" href="/events">EVENTS</a></li>
+<li class="nav-item active"><a class="nav-link" href="/guide">BEGINNER'S GUIDE</a></li>
+{% endblock %}
+{% block content %}
+<!-- ----------------------------------------------------------------------------- -->
+<!-- BEGINNER'S GUIDE ARTICLE -->
+<!-- ----------------------------------------------------------------------------- -->
+<article>
+  <!-- Row 1 -->
+  <div class="row">
+    <!-- Column 1 (only displayed on large and larger screens) -->
+    <div class="col-lg-6 d-none d-lg-block">
+      <!-- Image Carousel -->
+      <div id="carousel-lg" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-lg" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-lg" data-slide-to="1"></li>
+          <li data-target="#carousel-lg" data-slide-to="2"></li>
+          <li data-target="#carousel-lg" data-slide-to="3"></li>
+          <li data-target="#carousel-lg" data-slide-to="4"></li>
+          <li data-target="#carousel-lg" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+          <!-- Image 1 -->
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/1.webp') }}" alt="First slide">
+          </div>
+          <!-- Image 2 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/2.webp') }}" alt="Second slide">
+          </div>
+          <!-- Image 3 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/3.webp') }}" alt="Third slide">
+          </div>
+          <!-- Image 4 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/4.webp') }}" alt="Fourth slide">
+          </div>
+          <!-- Image 5 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/5.webp') }}" alt="Fifth slide">
+          </div>
+          <!-- Image 6 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/6.webp') }}" alt="Sixth slide">
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel-lg" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-lg" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+      <h1>WHAT IS BRAWL STARS?</h1>
+      <h4>
+        "Fast-paced 3v3 multiplayer and battle royale made for mobile! Play with friends or solo across a variety of
+        game modes in under three minutes.
+      </h4>
+      <h4>
+        Unlock and upgrade dozens of Brawlers with powerful Super abilities, Star Powers and Gadgets! Collect unique
+        skins to stand out and show off. Battle in a variety of mysterious locations within the Brawliverse!"
+      </h4>
+      <h4>
+        Brawl Stars is a third-person, top-down shooter game in which you play as your chosen Brawler and compete in a
+        variety of Events. In these Events, you face off against other Brawlers as you attempt to complete a special
+        objective unique to each type of Event.
+      </h4>
+    </div>
+  </div>
+
+  <!-- Row 2 (only displayed on medium and smaller screens) -->
+  <div class="row d-xl-none d-lg-none d-md-block">
+    <div class="col pt-2">
+      <!-- Image Carousel -->
+      <div id="carousel-md" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-md" data-slide-to="6" class="active"></li>
+          <li data-target="#carousel-md" data-slide-to="7"></li>
+          <li data-target="#carousel-md" data-slide-to="8"></li>
+          <li data-target="#carousel-md" data-slide-to="9"></li>
+          <li data-target="#carousel-md" data-slide-to="10"></li>
+          <li data-target="#carousel-md" data-slide-to="11"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Image 1 -->
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/1.webp') }}"
+              alt="First slide">
+          </div>
+          <!-- Image 2 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/2.webp') }}"
+              alt="Second slide">
+          </div>
+          <!-- Image 3 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/3.webp') }}"
+              alt="Third slide">
+          </div>
+          <!-- Image 4 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/4.webp') }}"
+              alt="Fourth slide">
+          </div>
+          <!-- Image 5 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/5.webp') }}"
+              alt="Fifth slide">
+          </div>
+          <!-- Image 6 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename='images/guide/6.webp') }}"
+              alt="Sixth slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel-md" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-md" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="row">
+    <div class="col pt-3">
+      <h1>BASIC GAMEPLAY</h1>
+      <h4>
+        To move your Brawler, drag your finger on the left side of the screen to manipulate the virtual joystick, and
+        your Brawler will move the direction that the joystick is pulled. Dragging your finger on the right side of the
+        screen will manipulate the Attack joystick. Drag it to aim, and release it to fire. Alternately, the joystick
+        can be tapped to perform a "quick-fire" attack.
+      </h4>
+      <h4>
+        Each Brawler has its own powerful Super ability. The Super is charged by hitting enemy Brawlers. Once fully
+        charged, it can be utilized with the yellow joystick located on the right side of the screen. The Super's charge
+        is not lost if your Brawler is defeated.
+      </h4>
+      <h4>
+        Two status bars are displayed over your Brawler's head. The top one indicates how much health the Brawler has
+        remaining. If the Brawler does not attack or take damage for 3 seconds, its health will start to regenerate over
+        time. The bottom bar has segments that indicate how many attacks the Brawler has ready. Most Brawlers can have a
+        maximum of three attacks ready at once. Attacks regenerate automatically over time.
+      </h4>
+    </div>
+  </div>
+
+  <!-- Row 4 -->
+  <div class="row">
+    <div class="col pt-3">
+      <h1>EVENTS AND TOKENS</h1>
+      <h4>
+        Battles are started in the Brawl tab. There are 8 main Event types:
+        <a href="../events#gem-grab-description">Gem Grab</a>,
+        <a href="../events#brawl-ball-description">Brawl Ball</a>,
+        <a href="../events#heist-description">Heist</a>,
+        <a href="../events#bounty-description">Bounty</a>,
+        <a href="../events#siege-description">Siege</a>,
+        <a href="../events#solo-showdown-description">Solo Showdown</a>, and
+        <a href="../events#duo-showdown-description">Duo Showdown</a>, in which you battle against other players. Each
+        Event has a different main objective. See their individual descriptions for more information.
+      </h4>
+      <h4>
+        Playing matches earns you Tokens from your Token bank, which are used to progress on the Brawl Pass. The Token
+        bank can hold up to 200 Tokens at a time, and 20 Tokens are re-added to the bank every 2 hours and 24 minutes,
+        capped at 200. If you earn all of the Tokens in the bank, you can come back later to earn more.
+      </h4>
+      <h4>
+        In addition to the normal Events, a Special Event opens every weekend. They are not ranked, meaning that winning
+        or losing in these events does not affect one's Trophy count. These Events award great amounts of Tokens in the
+        form of quests. The Special Event can either be
+        <a href="../events#big-game-description">Big Game</a>,
+        <a href="../events#robo-rumble-description">Robo Rumble</a>, or
+        <a href="../events#boss-fight-description">Boss Fight</a>.
+      </h4>
+    </div>
+  </div>
+  
+  <!-- Row 5 -->
+  <div class="row">
+    <div class="col pt-3">
+      <h1>BRAWL BOXES</h1>
+      <h4>
+        Brawl Boxes are the main way of obtaining Brawlers and other items. They can be obtained from the Shop, Brawl
+        Pass, or Trophy Road. Big Boxes are equivalent to 3 regular boxes, and Mega Boxes are equivalent to 10 regular
+        boxes.
+      </h4>
+      <h4>
+        Brawl Boxes can contain Coins, Power Points, Gadgets, Star Powers, new Brawlers, and a bonus 3% chance for Token
+        Doublers doubling the next 200 Tokens earned from matches. The chances of getting items are fixed while the
+        chance of getting a new Brawler is based on your personal luck value. The amount of Coins and Power Points
+        rewarded can vary significantly; however, a minimum is set to guarantee progress from every box opened.
+      </h4>
+    </div>
+  </div>
+</article>
+{% endblock %}

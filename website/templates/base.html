@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brawl Stars Companion.">
+  <meta name="keywords" content="brawl stars, supercell, mobile games">
+  <meta name="author" content="Greg Hosking">
+
+  <!-- Shim -->
+  <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<![endif]-->
+
+  <!-- Title and Favicon -->
+  <title>{% block title %}{% endblock %} | Brawl Stars Companion</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+  <!-- Link to main.css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+
+  <!-- Link to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Setup -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<!-- Body -->
+<body style="background: rgba(35, 57, 101, 255);">
+  <!-- Header -->
+  <header class="clearfix p-5">
+    <a href="/"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+    <h1>BRAWL STARS COMPANION</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md sticky-top navbar-dark">
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav nav-fill w-100 h3">
+        {% block nav_links %}
+        {% endblock %}
+      </ul>
+    </div>
+  </nav>
+
+  <div class="mx-lg-5 mx-md-5 mx-sm-0 py-lg-5 py-md-5 py-sm-0 px-lg-3 px-md-3 px-sm-0" id="content-container">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  <!-- Footer -->
+  <script>
+    window.onload = function () {
+      date = new Date();
+      document.getElementById("current-year").innerHTML = date.getFullYear();
+    }
+  </script>
+  <footer class="clearfix p-3">
+    <div class="footer-copyright text-center py-3" style="box-shadow: 0 50vh 0 50vh rgba(13, 26, 50, 255);">
+      <h4>&copy; <span id="current-year"></span>, GREG HOSKING</h4>
+    </div>
+  </footer>
+
+  <!-- JavaScript/jQuery/Bootstrap Setup -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+</html>
